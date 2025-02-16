@@ -4,20 +4,24 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * return: Always o (Success)
+ *
+ */
 int main(void)
 {
-	int x;
+	int n;
 
 	srand(time(0));
-	x = rand() - RAND_MAX / 2;
-
-	printf("%d\n", x);
+	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	if (x > 0)
+	if (n > 0)
 	{
 		printf("The number is positive \n");
 	}
-	else if (x < 0)
+	else if (n < 0)
 	{
 		printf("The number is negative \n");
 	}
