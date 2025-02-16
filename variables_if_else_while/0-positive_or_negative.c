@@ -12,8 +12,8 @@
 int main(void)
 {
 	int n;
+
 	n = rand() - RAND_MAX / 2;
-	
 	/* your code goes there */
 	if (n > 0)
 	{
