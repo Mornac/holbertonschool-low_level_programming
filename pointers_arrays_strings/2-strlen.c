@@ -2,17 +2,18 @@
 #include <stdio.h>
 
 /**
- *swap_int - function that swaps the values of two integers
- *@a: variable
- *@b: variable
- *return: 0
+ *_strlen - function that returns the length of a string
+ *@s: variable
+ *return: Always 0
  */
 
-void swap_int(int *a, int *b)
+int _strlen(char *s)
 {
-	int temp;
+	int l = 0;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	while (s[l] != '\0')
+	{
+		l++;
+	}
+	return (l);
 }
