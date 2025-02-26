@@ -5,13 +5,14 @@
  *swap_int - function that swaps the values of two integers
  *@a: variable
  *@b: variable
+ *return: 0
  */
 
 void swap_int(int *a, int *b)
 {
-	int temp = *a;
+	int temp;
+
+	temp = *a;
 	*a = *b;
 	*b = temp;
-
-	_putchar ('a');
 }
