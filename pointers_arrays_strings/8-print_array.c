@@ -4,14 +4,14 @@
 
 /**
  *print_array - function that prints n elements of an array of integers
- *@a: variable
- *@n: variable
+ *@a: array
+ *@n: number of members
  */
 void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 0; i != '\0'; i++)
+	for (i = 0; i < n; i++)
 	{
 		if (i < n - 1)
 			printf("%d, ", a[i]);
