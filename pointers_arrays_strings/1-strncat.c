@@ -6,6 +6,7 @@
  *_strncat - function concatenates two strings wthout terminating null(\0)
  *@src: string
  *@dest: string
+ *@n: variable
  *Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
