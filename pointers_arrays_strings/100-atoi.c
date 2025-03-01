@@ -16,7 +16,7 @@ int _atoi(char *s)
 	{
 		if (*s == '-')
 			num++;
-		else if (*s == '\0')
+		else if (*s == '0')
 			return (0);
 		s++;
 	}
