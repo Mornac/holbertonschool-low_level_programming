@@ -6,12 +6,17 @@
  *print_array - function that prints n elements of an array of integers
  *@a: variable
  *@n: variable
- *Return: always 0
  */
 void print_array(int *a, int n)
 {
-	int arr[5];
+	int i;
 
-	for (n = 0; n < 5; n++)
-		printf("%ls, ", &arr[n]);
+	for (i = 0; i < 5; i++)
+	{
+		if (i < n - 1)
+			printf("%d, ", a[i]);
+		else
+			printf("%d, ", a[i]);
+	}
+	printf("\n");
 }
