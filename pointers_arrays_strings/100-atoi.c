@@ -16,20 +16,20 @@ int _atoi(char *s)
 	{
 		if (*s == '-')
 			num++;
-		else if (*s == '0')
+		else if (*s == '\n')
 			return (0);
 		s++;
 	}
 
 	while (*s >= '0' && *s <= '9')
 	{
-		if (n < '0')
+		if (n < 0)
 			n *= 10;
 		n -= (int)(*s - '0');
 		s++;
 	}
 
-	if (num % 2 == '0')
+	if (num % 2 == 0)
 		n *= -1;
 	return (n);
 }
