@@ -15,10 +15,14 @@ char *leet(char *s)
 	char n[] = {4, 3, 0, 7, 1 };
 	int i;
 
-	for (i = 0; i < 5; i++)
+	while (*s)
 	{
-		if (*s == a[i] || *s == b[i])
-			*s = n[i];
+		for (i = 0; i < 5; i++)
+		{
+			if (*s == a[i] || *s == b[i])
+				*s = n[i];
+		}
+		s++;
 	}
 	return (e);
 }
