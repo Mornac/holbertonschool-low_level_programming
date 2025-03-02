@@ -4,11 +4,12 @@
 
 /**
  *leet - function that encodes a string into 1337
- *@s: capitalize words of string
- *Return: changed string
+ *@s: encode string
+ *Return: encoded string
  */
 char *leet(char *s)
 {
+	char *e = s;
 	char a[] = {'a', 'e', 'o', 't', 'l' };
 	char b[] = {'A', 'E', 'O', 'T', 'L' };
 	char n[] = {4, 3, 0, 7, 1 };
@@ -19,5 +20,5 @@ char *leet(char *s)
 		if (*s == a[i] || *s == b[i])
 			*s = n[i];
 	}
-	return (s);
+	return (e);
 }
