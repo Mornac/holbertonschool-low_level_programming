@@ -11,7 +11,6 @@ char *leet(char *s)
 {
 	char *e = s;
 	char a[] = {'a', 'e', 'o', 't', 'l' };
-	char b[] = {'A', 'E', 'O', 'T', 'L' };
 	char n[] = {4, 3, 0, 7, 1 };
 	int i;
 
@@ -19,8 +18,8 @@ char *leet(char *s)
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if (*s == a[i] || *s == b[i])
-				*s = n[i];
+			if (*s == a[i] || *s == a[i] - 32)
+				*s = n[i] + '0';
 		}
 		s++;
 	}
