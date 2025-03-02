@@ -19,7 +19,5 @@ char *leet(char *s)
 		if (*s == a[i] || *s == b[i])
 			*s = n[i];
 	}
-	s++;
-
 	return (s);
 }
