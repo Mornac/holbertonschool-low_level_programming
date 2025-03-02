@@ -10,19 +10,31 @@
 char *cap_string(char *str)
 {
 	int c = 0;
-	int spaceCounter = 0;
 
-	while (str[c] != '\0')
+	while (str[c])
 	{
-		if ((spaceCounter % 2 == 1) && str[c] >= 'a' && str[c] <= 'z')
+		while (!(str[c] >= 'a' && str[c] <= 'z'))
 		{
-			str[c] = str[c] - 32;
-		}
-		else if (str[c] == ' ')
-		{
-			spaceCounter++;
-		}
+			c++;
+			{
+				if (str[c - 1] == ' ' ||
+				if (str[c - 1] == '\t' ||
+				if (str[c - 1] == '\n' ||
+				if (str[c - 1] == ',' ||
+				if (str[c - 1] == ';' ||
+				if (str[c - 1] == '.' ||
+				if (str[c - 1] == '!' ||
+				if (str[c - 1] == '?' ||
+				if (str[c - 1] == '"' ||
+				if (str[c - 1] == '(' ||
+				if (str[c - 1] == ')' ||
+				if (str[c - 1] == '{' ||
+				if (str[c - 1] == '}' ||
+				index == 0)
+					str[c] -= 32;
+			}
 		c++;
+		}
 	}
 	return (str);
 }
