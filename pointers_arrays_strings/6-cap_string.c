@@ -7,34 +7,37 @@
  *@str: capitalize words of string
  *Return: changed string
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int c = 0;
+	char *temp;
+	char prev;
 
-	while (str[c])
-	{
-		while (!(str[c] >= 'a' && str[c] <= 'z'))
+	temp = s;
+	if (*s <= 'z' && *s >= 'a')
+		*s -= 32;
+	do {
+		if (*s <= 'z' && *s >= 'a')
 		{
-			c++;
+			prev = *(s - 1);
+			switch (prev)
 			{
-				if (str[c - 1] == ' ' ||
-				if (str[c - 1] == '\t' ||
-				if (str[c - 1] == '\n' ||
-				if (str[c - 1] == ',' ||
-				if (str[c - 1] == ';' ||
-				if (str[c - 1] == '.' ||
-				if (str[c - 1] == '!' ||
-				if (str[c - 1] == '?' ||
-				if (str[c - 1] == '"' ||
-				if (str[c - 1] == '(' ||
-				if (str[c - 1] == ')' ||
-				if (str[c - 1] == '{' ||
-				if (str[c - 1] == '}' ||
-				index == 0)
-					str[c] -= 32;
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+			case ' ':
+			case '\t':
+			case '\n':
+				*s -= 32;
+				break;
 			}
-		c++;
 		}
-	}
-	return (str);
+	} while (*s++);
+	return (temp);
 }
