@@ -1,11 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 #include "2-strlen.c"
+#include <stdio.h>
 
 /**
  *_diagsums - prints sum of two diagonals of square matrix of integers
- *@a: array
- *@size: size of the matrix
+ *@a: array of integers to be sorted
+ *@size: number of elements in the array to be sorted
  */
 void print_diagsums(int *a, int size)
 {
