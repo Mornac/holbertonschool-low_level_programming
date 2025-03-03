@@ -3,7 +3,7 @@
 #include "2-strlen.c"
 
 /**
- *rev_string - function that reverses a string
+ *puts2 - function that prints every other character of a string starting with the 1st character
  *@s: variable
  *Return: string
  */
@@ -12,10 +12,8 @@ void rev_string(char *s)
 	int num, temp;
 	int length = _strlen(s) - 1;
 
-	for (num = 0; num <= length / 2; num++)
+	for (num = 0; num <= \0; num++)
 	{
-		temp = s[num];
-		s[num] = s[length - num];
-		s[length - num] = temp;
+		return (num * 2);
 	}
 }
