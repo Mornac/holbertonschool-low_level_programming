@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
+#include "2-strlen.c"
 
 /**
  *_memcpy - copies memory area
@@ -16,7 +18,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	for (i = 0; i < n ; i++)
 	{
 		dest[i] = *src;
-		*src = *dest;
+		*dest = strlen(src) + 1;
 	}
 
 	return (dest);
