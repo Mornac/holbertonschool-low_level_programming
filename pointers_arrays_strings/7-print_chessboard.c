@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
 #include "2-strlen.c"
 
 /**
- *_chessboard - prints the chessboard
+ *_chessboard - function that prints the chessboard
  *@a: array
  */
 void print_chessboard(char (*a)[8])
