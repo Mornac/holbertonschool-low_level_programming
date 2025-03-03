@@ -7,7 +7,6 @@
  *_chessboard - prints the chessboard
  *@a: array
  *
- *Return: NULL
  */
 void print_chessboard(char (*a)[8])
 {
