@@ -3,8 +3,8 @@
 #include "2-strlen.c"
 
 /**
- *_chessboard - function that prints the chessboard
- *@a: array
+ *print_chessboard - function that prints the chessboard
+ *@a: pointer to the chessboard array
  */
 void print_chessboard(char (*a)[8])
 {
