@@ -4,7 +4,7 @@
 /**
  *_sqrt_recursion - return natural square root of a number
  *@n: number
- *Return: a value
+ *Return: natural square root
  */
 int _sqrt_recursion(int n)
 {
@@ -20,7 +20,7 @@ int _sqrt_recursion(int n)
 
 	else
 	{
-		return (n + _sqrt_recursion(n - 1));
+		return (_sqrt_recursion(n));
 	}
 	return (0);
 }
