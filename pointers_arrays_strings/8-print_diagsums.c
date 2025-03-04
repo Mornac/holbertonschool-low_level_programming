@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- *_diagsums - prints sum of two diagonals of square matrix of integers
+ *print_diagsums - prints sum of two diagonals of square matrix of integers
  *@a: array of integers to be sorted
  *@size: number of elements in the array to be sorted
  */
