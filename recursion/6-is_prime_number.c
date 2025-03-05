@@ -12,21 +12,21 @@ int is_prime_number(int n)
 
 	if (n <= 1)
 		return (0);
-	return (prime(n, p));
+	return (_prime(n, p));
 }
 
 /**
- *prime - returns 1 if input int is a prime nb otherwise return 0
+ *_prime - returns 1 if input int is a prime nb otherwise return 0
  *@n: number to check
  *@p: number checked
  *Return: 1 if prime nb, 0 otherwise
  */
-int prime(int n, int p)
+int _prime(int n, int p)
 {
 	if (p <= 1)
 		return (1);
 
 	else if (n % p == 0)
 		return (0);
-	return (prime(n, p - 1));
+	return (_prime(n, p - 1));
 }
