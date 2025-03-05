@@ -2,22 +2,31 @@
 #include <stdio.h>
 
 /**
- *is_prime_number - returns 1 if input int is a prime nb otherwise return 0
- *@n: number
- *Return: number
+ *is_prime_number - returns True if input int is a prime nb
+ *@n: number to check
+ *Return: true or false
  */
 int is_prime_number(int n)
 {
-	int i = 2;
+	int p = n / 2;
 
-	if (n % i == 0)
-	{
+	if (n <= 1)
 		return (0);
-	}
+	return (prime(n, p));
+}
 
-	else if (i * i > n)
-	{
+/**
+ *prime - returns 1 if input int is a prime nb otherwise return 0
+ *@n: number to check
+ *@p: number checked
+ *Return: 1 if prime nb, 0 otherwise
+ */
+int prime(int n, int p)
+{
+	if (p <= 1)
 		return (1);
-	}
-	return (0);
+
+	else if (n % p == 0)
+		return (0);
+	return (prime(n, p - 1));
 }
