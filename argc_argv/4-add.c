@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
 			else
 			{
-				sum += *argv[i];
+				sum += argv[i][j];
 			}
 		}
 
