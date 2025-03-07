@@ -22,13 +22,13 @@ int main(int argc, char *argv[])
 		{
 			if ((argv[i][j] > 0) && (argv[i][j] <= 9))
 			{
-				printf("error\n");
-				return (0);
+				sum += argv[i][j];
 			}
 
 			else
 			{
-				sum += argv[i][j];
+				printf("error\n");
+				return (0);
 			}
 		}
 
