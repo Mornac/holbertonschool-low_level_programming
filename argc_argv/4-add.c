@@ -18,19 +18,17 @@ int main(int argc, char *argv[])
 	}
 
 	for (i = 1; i < argc; i++)
-		for (j = 0; j < argc; j++)
+	{
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if ((argv[i][j] > 0) && (argv[i][j] <= 9))
-			{
-				sum += argv[i][j];
-			}
-
-			else
+			if ((argv[i][j] < '0') || (argv[i][j] > '9'))
 			{
 				printf("error\n");
 				return (0);
 			}
-		}
 
+		}
+	sum += atoi(argv[i]);
+	}
 	return (0);
 }
