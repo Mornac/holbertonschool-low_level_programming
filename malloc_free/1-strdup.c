@@ -30,6 +30,5 @@ char *_strdup(char *str)
 
 	cpy[len] = '\0';
 
-	free(cpy);
-	return (0);
+	return (cpy);
 }
