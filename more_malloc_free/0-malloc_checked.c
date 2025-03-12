@@ -25,7 +25,11 @@ void *malloc_checked(unsigned int b)
 
 	for (b = 1; b <= 98; b++)
 	{
-		p[b] = b;
+		p = malloc(sizeof(int));
+		if (p == NULL)
+		{
+			return (NULL);
+		}
 	}
 
 	for (b = 1; b <= 98; b++)
