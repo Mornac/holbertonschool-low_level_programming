@@ -6,7 +6,7 @@
 /**
  *malloc_checked - allocate memory using malloc
  *@b: variable
- * Return: Always 0.
+ *Return: None
  */
 void *malloc_checked(unsigned int b)
 {
@@ -16,21 +16,18 @@ void *malloc_checked(unsigned int b)
 
 	if (p == NULL)
 	{
+		p[b] = b;
+	}
+
+	else
+	{
 		return (NULL);
 	}
 
 	for (b = 1; b <= 98; b++)
 	{
 		p = malloc(sizeof(int));
-		if (p == NULL)
-		{
-			return (NULL);
-		}
-	}
-
-	for (b = 1; b <= 98; b++)
-	{
 		p[b] = b;
 	}
-	return (0);
+	return (NULL);
 }
