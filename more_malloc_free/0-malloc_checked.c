@@ -10,11 +10,11 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	int *i;
+	int *p;
 
-	i = (int *) malloc(10 * sizeof(int));
+	p = (int *) malloc(10 * sizeof(int));
 
-	if (i == NULL)
+	if (p == NULL)
 	{
 		return (NULL);
 	}
@@ -25,6 +25,14 @@ void *malloc_checked(unsigned int b)
 
 	for (b = 1; b <= 98; b++)
 	{
-		i[b] = b;
+		p[b] = b;
+	}
+
+	for (b = 1; b <= 98; b++)
+	{
+		if (p == NULL)
+		{
+			return (NULL);
+		}
 	}
 }
