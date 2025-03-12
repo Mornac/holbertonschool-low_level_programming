@@ -34,9 +34,7 @@ void *malloc_checked(unsigned int b)
 
 	for (b = 1; b <= 98; b++)
 	{
-		if (p == NULL)
-		{
-			return (NULL);
-		}
+		p[b] = b;
 	}
+	return (0);
 }
