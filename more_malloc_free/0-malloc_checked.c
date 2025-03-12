@@ -18,10 +18,6 @@ void *malloc_checked(unsigned int b)
 	{
 		return (NULL);
 	}
-	else
-	{
-		return (NULL);
-	}
 
 	for (b = 1; b <= 98; b++)
 	{
