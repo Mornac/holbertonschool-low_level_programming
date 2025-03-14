@@ -3,10 +3,10 @@
 #include "dog.h"
 
 /**
- *_strlen - return length of the structure
+ *_strlen - return length of a string
  *
- *@s: char
- *Return : length
+ *@s: char type
+ *Return : length of string
  */
 
 int _strlen(char *s)
@@ -23,7 +23,7 @@ int _strlen(char *s)
  *_strcpy - copy the string
  *@dest: destination of the string
  *@src: source of the string
- *Return: return the copy
+ *Return: return the value
  */
 
 char *_strcpy(char *dest, char *src)
@@ -38,7 +38,7 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
- *new_dog - function that creates a new dog
+ **new_dog - function that creates a new dog
  *@name: name of the new dog
  *@age: age of the new dog
  *@owner: owner's new dog
