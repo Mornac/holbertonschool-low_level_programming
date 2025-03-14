@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
@@ -10,6 +10,7 @@
 int _strlen(char *s)
 {
 	int len = 0;
+
 	while (s)
 	len++;
 
@@ -28,18 +29,19 @@ char *_strcpy(char *dest, char *src)
 	int i = 0;
 
 	for (; src[i]; i++)
-	dest[i] = src[i];
-	
+	{
+		dest[i] = src[i];
+	}
+
 	dest[i] = '\0';
 	return (dest);
 }
 
-
 /**
  **new_dog - function that creates a new dog
- *@name: name of the new dog
- *@age: age of the new dog
- *@owner: owner's new dog
+ *@name: char
+ *@age: float
+ *@owner: char
  *Return: Always success
  */
 dog_t *new_dog(char *name, float age, char *owner)
