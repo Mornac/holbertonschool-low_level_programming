@@ -6,7 +6,7 @@
  *_strlen - return length of a string
  *
  *@s: char type
- *Return : length of string
+ *Return: length of a string
  */
 
 int _strlen(char *s)
