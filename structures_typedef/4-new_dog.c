@@ -3,40 +3,86 @@
 #include "dog.h"
 
 /**
+ *_strlen - return length of the structure
+ *
+ *@s: char
+ *Return : length
+ */
+
+int _strlen(char *s)
+{
+	int a;
+
+	for (a = 0; s[a] != '\0'; a++)
+	{
+
+	}
+	return (a);
+}
+/**
+ *_strcpy - copy the string
+ *@dest: destination of the string
+ *@src: source of the string
+ *Return: return the copy
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int a;
+
+	for (a = 0; src[a] != '\0'; a++)
+	{
+		dest[a] = src[a];
+	}
+	dest[a] = '\0';
+	return (dest);
+}
+/**
  *new_dog - function that creates a new dog
  *@name: name of the new dog
  *@age: age of the new dog
  *@owner: owner's new dog
- *Return: NULL if the function fails
+ *Return: Always success
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	dog_t *ndog;
 
-	dog_t *new_dog = (dog_t *)malloc(sizeof(dog_t));
-
-	if (new_dog == NULL)
+	ndog = malloc(sizeof(struct dog));
+	if (ndog == NULL)
 	{
+		free(ndog);
 		return (NULL);
 	}
-
-	new_dog->name = (char *)malloc(strlen(name) + 1);
-	if (new_dog->name == NULL)
+	if (name == NULL)
 	{
-		return (NULL);
-		free(new_dog);
-	}
-	strcpy(new_dog->name, name);
-
-	new_dog->owner = (char *)malloc(strlen(owner) + 1);
-	if (new_dog->owner == NULL)
-	{
-		free(new_dog->name);
-		free(new_dog);
+		free(ndog);
 		return (NULL);
 	}
-	strcpy(new_dog->owner, owner);
-
-	printf("My name is %s, and I am %.1f :) - Woof!\n", name, age);
-
-	return (0);
+	ndog->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (ndog->name == NULL)
+	{
+		free(ndog->name);
+		free(ndog);
+		return (NULL);
+	}
+	_strcpy(ndog->name, name);
+	ndog->age = age;
+	if (owner == NULL)
+	{
+		free(ndog->name);
+		free(ndog);
+		return (NULL);
+	}
+	ndog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (ndog->owner == NULL)
+	{
+		free(ndog->name);
+		free(ndog->owner);
+		free(ndog);
+		return (NULL);
+	}
+	strcpy(ndog->owner, owner);
+	return (ndog);
 }
