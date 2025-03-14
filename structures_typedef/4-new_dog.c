@@ -9,15 +9,14 @@
  */
 int _strlen(char *s)
 {
-	int len = 0;
+	int a;
 
-	while (s)
-	len++;
+	for (a = 0; s[a] != '\0'; a++)
+	{
 
-	return (len);
+	}
+	return (a);
 }
-
-
 /**
  *_strcpy - copy the string
  *@dest: destination of the string
@@ -26,17 +25,16 @@ int _strlen(char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int a;
 
-	for (; src[i]; i++)
+	for (a = 0; src[a]; a++)
 	{
-		dest[i] = src[i];
+		dest[a] = src[a];
 	}
 
-	dest[i] = '\0';
+	dest[a] = '\0';
 	return (dest);
 }
-
 /**
  **new_dog - function that creates a new dog
  *@name: char
