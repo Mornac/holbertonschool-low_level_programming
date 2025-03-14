@@ -4,39 +4,37 @@
 
 /**
  *_strlen - return length of a string
- *
- *@s: char type
+ *@s: string
  *Return: length of a string
  */
-
 int _strlen(char *s)
 {
-	int a;
+	int len = 0;
+	while (s)
+	len++;
 
-	for (a = 0; s[a] != '\0'; a++)
-	{
-
-	}
-	return (a);
+	return (len);
 }
+
+
 /**
  *_strcpy - copy the string
  *@dest: destination of the string
  *@src: source of the string
  *Return: return the value
  */
-
 char *_strcpy(char *dest, char *src)
 {
-	int a;
+	int i = 0;
 
-	for (a = 0; src[a] != '\0'; a++)
-	{
-		dest[a] = src[a];
-	}
-	dest[a] = '\0';
+	for (; src[i]; i++)
+	dest[i] = src[i];
+	
+	dest[i] = '\0';
 	return (dest);
 }
+
+
 /**
  **new_dog - function that creates a new dog
  *@name: name of the new dog
@@ -44,7 +42,6 @@ char *_strcpy(char *dest, char *src)
  *@owner: owner's new dog
  *Return: Always success
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ndog;
