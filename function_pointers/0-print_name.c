@@ -51,9 +51,10 @@ void print_name(char *name, void (*f)(char *))
 		for (i = 0; i < 2; i++)
 		{
 			f(name);
-			print_name("Bob", my_name);
-			print_name("BOB DYLAN", my_uppercase_name);
-			printf("\n");
 		}
-	}	
+			
+		print_name("Bob", my_name);
+		print_name("BOB DYLAN", my_uppercase_name);
+		printf("\n");
+	}
 }
