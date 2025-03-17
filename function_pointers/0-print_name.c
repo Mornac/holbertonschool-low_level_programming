@@ -39,22 +39,11 @@ void my_uppercase_name(char *name)
  *print_name - print a name using the provided function
  *@name: the name to print
  *@f: pointer to a function that takes a string argument and returns nothing
- *
- *Return: Nothing.
  */
 void print_name(char *name, void (*f)(char *))
 {
-	unsigned int i;
+	if (name == NULL || f == NULL)
+	return;
 
-	if (f != NULL)
-	{
-		for (i = 0; i < 2; i++)
-		{
-			f(name);
-		}
-			
-		print_name("Bob", my_name);
-		print_name("BOB DYLAN", my_uppercase_name);
-		printf("\n");
-	}
+	f(name);
 }
