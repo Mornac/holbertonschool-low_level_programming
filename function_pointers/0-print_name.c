@@ -49,11 +49,12 @@ void print_name(char *name, void (*f)(char *))
 	if (f != NULL)
 	{
 		f(name);
-		for (i = 0; i < 2; i++)
-		{
-			print_name("Bob", my_name);
-			print_name("BOB DYLAN", my_uppercase_name);
-			printf("\n");
-		}
+	}
+
+	for (i = 0; i < 2; i++)
+	{
+		print_name("Bob", my_name);
+		print_name("BOB DYLAN", my_uppercase_name);
+		printf("\n");
 	}
 }
