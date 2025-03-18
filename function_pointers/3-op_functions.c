@@ -34,10 +34,10 @@ int op_mul(int a, int b)
 }
 
 /**
- *op_div - returns the result of a division
+ *op_div - returns the result of the division
  *@a: int
  *@b: int
- *Return : Always 0
+ *Return: Always 0
  */
 int op_div(int a, int b)
 {
@@ -50,7 +50,7 @@ int op_div(int a, int b)
  *@b: int
  *Return: Always 0
  */
- int op_mod(int a, int b)
+int op_mod(int a, int b)
 {
 	return (a % b);
 }
