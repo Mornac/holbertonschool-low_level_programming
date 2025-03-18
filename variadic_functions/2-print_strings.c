@@ -33,6 +33,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", separator);
 		}
+
+		if (i != n)
+		{
+			printf("(NULL)");
+		}
 	}
 
 	va_end(args);
