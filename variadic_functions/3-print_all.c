@@ -5,7 +5,7 @@
 
 /**
  *print_char - prints characters
- *@c: character
+ *@args: arguments
  *
  */
 void print_char(va_list *args)
@@ -15,18 +15,17 @@ void print_char(va_list *args)
 
 /**
  *print_int - prints integers
- *@i: integer
+ *@args: arguments
  *
  */
 void print_int(va_list *args)
-
 {
 	printf("%d", va_arg(*args, int));
 }
 
 /**
  *print_float - prints floats
- *@f: float
+ *@args: arguments
  *
  */
 void print_float(va_list *args)
@@ -35,17 +34,17 @@ void print_float(va_list *args)
 }
 
 /**
- *print_str - prints strings
- *@str: string
+ *print_string - prints strings
+ *@args: arguments
  *
  */
 void print_string(va_list *args)
 {
-	char *str = va_arg(*args, char *);
+	char *str = va_arg(*args, char*);
 
 	if (!str)
 	{
-		str = "nil";
+		str = "(nil)";
 	}
 	printf("%s", str);
 }
