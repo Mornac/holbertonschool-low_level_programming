@@ -1,23 +1,27 @@
 #ifndef VARIADIC_FUNCTION_H
 #define VARIADIC_FUNCTION_H
 
-#include <stdio.h>
 #include <stdarg.h>
 
-typedef struct format
+/**
+ *struct format_type - definition of the struct format
+ *@format: type de format
+ *@print_f: function assiociated
+ */
+typedef struct format_type
 {
-	char *op;
-	void(*f)(va_list);
-} op_t;
+	char format;
+	void (*print_f)(va_list *);
+} format_t;
 
-void print_char(char c);
-void print_int(int i);
-void print_float(float f);
-void print_str(char *s);
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
+void print_char(va_list *args);
+void print_int(va_list *args);
+void print_float(va_list *args);
+void print_string(va_list *args);
 
 #endif
