@@ -11,8 +11,9 @@
 */
 list_t *add_node(list_t **head, const char *str)
 {
+	
 	list_t *new_node = (list_t *)malloc(sizeof(list_t));
-
+	
 	if (new_node == NULL)
 	{
 		printf("Memory allocation failed\n");
@@ -23,7 +24,6 @@ list_t *add_node(list_t **head, const char *str)
 	if (new_node->str == NULL)
 	{
 		printf("String duplucation failed\n");
-		free(new_node);
 		return (NULL);
 	}
 
@@ -33,6 +33,5 @@ list_t *add_node(list_t **head, const char *str)
 
 	printf("[%u] %s\n", new_node->len, new_node->str);
 
-	free(new_node);
-	return (0);
+	return (new_node);
 }
