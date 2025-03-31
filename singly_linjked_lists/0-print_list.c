@@ -10,22 +10,19 @@
  */
 size_t print_list(const list_t *h)
 {
-	unsigned int len;
-	struct list_s *next;
-	char *str;
-	int count = 0;
+	size_t count = 0;
 
-	while (str != NULL)
+	while (h != NULL)
 	{
 		count++;
-		str = str->next;
+		h = h->next;
 	}
-	
-	if (str = NULL)
+
+	if (h == NULL)
 	{
 		printf("[0] (nil)");
 	}
 
-	printf("[len] str");
+	printf("[count] h");
 	return (0);
 }
