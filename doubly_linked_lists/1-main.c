@@ -1,12 +1,13 @@
-#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include <stddef.h>
+#include <stdlib.h>
 
 /**
- * main - check the code
+ *main - check the code
  *
- * Return: Always EXIT_SUCCESS.
+ *Return: Always EXIT_SUCCESS.
  */
 int main(void)
 {
@@ -17,17 +18,19 @@ int main(void)
 
 	head = &hello;
 	new = malloc(sizeof(dlistint_t));
+
 	if (new == NULL)
 	{
 		dprintf(2, "Error: Can't malloc\n");
 		return (EXIT_FAILURE);
 	}
+
 	new->n = 9;
 	head->prev = new;
 	new->next = head;
 	new->prev = NULL;
 	head = new;
-	n = print_dlistint(head);
+	n = dlistint_len(head);
 	printf("-> %lu elements\n", n);
 	free(new);
 	return (EXIT_SUCCESS);
