@@ -67,7 +67,5 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	close(fptr1);
-	close(fptr2);
 	return (0);
 }
