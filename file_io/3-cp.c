@@ -54,7 +54,6 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
-
 	if (close(fptr1) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close file %s\n", argv[1]);
@@ -66,6 +65,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close file %s\n", argv[2]);
 		exit(100);
 	}
-
 	return (0);
 }
