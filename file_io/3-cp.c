@@ -8,13 +8,15 @@
 #define BUFFER_SIZE 1024
 /**
  *main - copies the content of a file to another file
+ *@argc: number of args
+ *@argv: array of args
  *Return: exit errors
  */
 int main(int argc, char *argv[])
 {
 	int fptr1, fptr2;
 	char buffer[BUFFER_SIZE];
-	ssize_t bytes_read;
+	ssize_t bytes_read, bytes_written;
 
 	if (argc != 3)
 	{
@@ -38,7 +40,8 @@ int main(int argc, char *argv[])
 
 	while ((bytes_read  = read(fptr1, buffer, BUFFER_SIZE)) > 0)
 	{
-		if (write(fptr2, buffer, bytes_read) == -1)
+		bytes_written = write(fptr2, buffer, bytes_read);
+		if (bytes_written !=bytes_read)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(fptr1);
