@@ -29,8 +29,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fptr2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-
+	fptr2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fptr2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -46,7 +45,7 @@ int main(int argc, char *argv[])
 			close(fptr2);
 			exit(99);
 		}
-		
+
 		if (bytes_read == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -55,6 +54,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
+
 	if (close(fptr1) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close file %s\n", argv[1]);
@@ -66,5 +66,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close file %s\n", argv[2]);
 		exit(100);
 	}
+
+	close(fptr1);
+	close(fptr2);
 	return (0);
 }
