@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	fptr1 = open(argv[1], O_RDONLY);
 	if (fptr1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
 	if (fptr2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
 
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
 	if (bytes_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file file_from\n");
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
